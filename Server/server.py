@@ -13,8 +13,8 @@ app = Flask(__name__, static_url_path='/static/')
 api = Api(app)
 cors = CORS(app, resources={r"*": {"origins": "*"}})
 session = boto3.Session(
-    aws_access_key_id='AKIAJ3MLTGN22ULGF3KQ',
-    aws_secret_access_key='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'
+    aws_access_key_id='',
+    aws_secret_access_key=''
 )
 dynamodb = session.resource('dynamodb', region_name='us-east-2')
 sqs = session.resource('sqs', region_name='us-east-2')
